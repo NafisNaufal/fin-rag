@@ -1,0 +1,62 @@
+[
+  {
+    "question": "In Apple's Products and Services Performance section, what were iPhone net sales in 2025?",
+    "expected_answer": "$209,586 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 26}]
+  },
+  {
+    "question": "In Apple's Products and Services Performance section, what were Services net sales in 2025?",
+    "expected_answer": "$109,158 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 26}]
+  },
+  {
+    "question": "What drove the increase in Apple's Services net sales in 2025 compared with 2024?",
+    "expected_answer": "Higher net sales from advertising, the App Store, and cloud services.",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 26}]
+  },
+  {
+    "question": "What was Apple's Products gross margin in 2025 in the Gross Margin section?",
+    "expected_answer": "$112,887 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 27}]
+  },
+  {
+    "question": "Why did Apple's Products gross margin percentage decrease in 2025?",
+    "expected_answer": "A different product mix and tariff costs, partially offset by other favorable costs.",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 27}]
+  },
+  {
+    "question": "What was Apple's Products gross margin percentage in 2025?",
+    "expected_answer": "36.8%",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 27}]
+  },
+  {
+    "question": "What was Apple's research and development expense in 2025 in the Operating Expenses section?",
+    "expected_answer": "$34,550 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 27}]
+  },
+  {
+    "question": "According to Apple's Consolidated Statements of Operations, what were total net sales in 2025?",
+    "expected_answer": "$416,161 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 32}]
+  },
+  {
+    "question": "According to Apple's Consolidated Statements of Operations, what was net income in 2025?",
+    "expected_answer": "$112,010 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 32}]
+  },
+  {
+    "question": "According to Apple's Consolidated Statements of Operations, what was diluted earnings per share in 2025?",
+    "expected_answer": "$7.46",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 32}]
+  },
+  {
+    "question": "According to Apple's Term Debt note, what was total term debt principal in 2025?",
+    "expected_answer": "$91,281 million",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 47}]
+  },
+  {
+    "question": "According to Apple's Share Repurchase Program note, how many common shares did it repurchase in 2025 and for how much?",
+    "expected_answer": "402 million shares for $89.3 billion",
+    "expected_sources": [{"filename": "apple_2025_form_10k.pdf", "page": 47}]
+  }
+]

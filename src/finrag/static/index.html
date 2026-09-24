@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FinRAG · Report workspace</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside>
+    <a class="brand" href="/" aria-label="FinRAG home"><span class="brand-icon">f.</span> FinRAG</a>
+    <div class="workspace-label">YOUR WORKSPACE</div>
+    <div class="nav-active"><span>▤</span> Report intelligence <span class="small-tag">01</span></div>
+    <div class="library-title">REPORT LIBRARY <span id="report-count">0</span></div>
+    <div id="documents" class="documents"><p class="muted">Your reports will appear here.</p></div>
+    <form id="upload-form">
+      <label class="upload-box" for="pdf"><span class="upload-icon">↑</span><strong>Add a financial report</strong>
+        <span id="file-label">Choose a PDF · up to 50 MB</span>
+        <input id="pdf" name="file" type="file" accept=".pdf,application/pdf" required>
+      </label>
+      <label class="field-label" for="company">Company <span>optional</span></label>
+      <input id="company" name="company" placeholder="e.g. Nusantara Holdings" maxlength="200">
+      <label class="field-label" for="year">Reporting year <span>optional</span></label>
+      <input id="year" name="year" type="number" min="1900" max="2100" placeholder="2025">
+      <button id="upload-button" class="primary" type="submit">Process report <span>↗</span></button>
+      <p id="upload-status" class="status" role="status" aria-live="polite"></p>
+    </form>
+    <div class="sidebar-footer"><span class="dot"></span> Local workspace<br><small>Reports stay on this machine.</small></div>
+  </aside>
+  <main>
+    <header><div><span class="breadcrumb">Workspace</span><span class="slash">/</span> Report intelligence</div>
+      <span id="mode" class="pill">Connecting…</span></header>
+    <div class="main-content">
+      <div class="eyebrow">FROM REPORTS TO EVIDENCE</div>
+      <h1>Numbers tell a story.<br><span>Find the source.</span></h1>
+      <p class="intro">Explore financial reports with answers you can trace.<br>Every source leads back to a page, a table, a figure.</p>
+      <div class="stats"><div><span class="stat-label">REPORTS INDEXED</span><strong id="stat-reports">0</strong></div><div><span class="stat-label">PAGES PROCESSED</span><strong id="stat-pages">0</strong></div><div><span class="stat-label">EVIDENCE PASSAGES</span><strong id="stat-chunks">0</strong></div></div>
+      <section class="question-card">
+        <div class="section-top"><h2>Ask your reports</h2><label class="sr-only" for="scope">Report to search</label><select id="scope"><option value="">All indexed reports</option></select></div>
+        <form id="ask-form">
+          <label class="sr-only" for="question">Question about your reports</label>
+          <textarea id="question" placeholder="What drove revenue growth this year?" maxlength="2000" rows="3" required></textarea>
+          <div class="question-bottom"><span><span class="dot"></span> Grounded in your documents</span><button id="ask-button" class="primary" type="submit">Find an answer <span>↗</span></button></div>
+        </form>
+      </section>
+      <div class="suggestions"><span>TRY ASKING</span><button data-question="What was total revenue in 2025?">Revenue in 2025 ↗</button><button data-question="What factors contributed to revenue growth?">Growth drivers ↗</button><button data-question="What was net income in 2025?">Net income ↗</button></div>
+      <section class="question-card">
+        <div class="section-top"><h2>Calculate year-over-year change</h2></div>
+        <p class="muted">Choose one report and enter a table row exactly as printed. The calculation uses its year columns and shows the source.</p>
+        <form id="growth-form">
+          <label class="field-label" for="growth-metric">Table row</label>
+          <input id="growth-metric" placeholder="e.g. iPhone" maxlength="120" required>
+          <div class="question-bottom"><label>From <input id="growth-from" type="number" min="1900" max="2100" value="2024" required></label><label>To <input id="growth-to" type="number" min="1900" max="2100" value="2025" required></label><button id="growth-button" class="primary" type="submit">Calculate <span>↗</span></button></div>
+        </form>
+      </section>
+      <div id="question-status" class="status" role="status" aria-live="polite"></div>
+      <section id="answer-section" hidden>
+        <div class="section-top"><h2 id="answer-title">Answer</h2><span id="answer-mode" class="pill"></span></div>
+        <div id="answer" class="answer-text"></div><div id="warnings" class="warnings"></div>
+        <div class="section-top evidence-heading"><h2>Supporting evidence</h2><span class="muted">Physical PDF page numbers</span></div>
+        <div id="sources"></div>
+      </section>
+      <section id="empty-state" class="empty-state"><span class="empty-symbol">▤</span><h2>Your next insight starts with a report.</h2><p>Add a PDF from the sidebar, then ask a question.<br>We’ll keep the relevant passages and their sources together.</p><div class="steps"><span>01 &nbsp; Upload</span><span>→</span><span>02 &nbsp; Ask</span><span>→</span><span>03 &nbsp; Verify</span></div></section>
+      <footer>FinRAG <span>·</span> Read closely. Verify the evidence.</footer>
+    </div>
+  </main>
+</body>
+</html>

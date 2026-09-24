@@ -1,0 +1,7 @@
+[
+  {"question":"What was revenue in 2025?","expected_sources":[{"filename":"demo_annual_report.pdf","page":1}]},
+  {"question":"What factors contributed to revenue growth?","expected_sources":[{"filename":"demo_annual_report.pdf","page":1}]},
+  {"question":"What was net income in 2025?","expected_sources":[{"filename":"demo_annual_report.pdf","page":1}]},
+  {"question":"How did the company mitigate raw material price risk?","expected_sources":[{"filename":"demo_annual_report.pdf","page":2}]},
+  {"question":"How many employees worked at the company?","expected_sources":[{"filename":"demo_annual_report.pdf","page":2}]}
+]
